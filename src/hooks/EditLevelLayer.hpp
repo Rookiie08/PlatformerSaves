@@ -1,7 +1,7 @@
 #pragma once
 #include <Geode/Geode.hpp>
 #include <Geode/modify/EditLevelLayer.hpp>
-#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
+#include "PersistenceAPI.hpp"
 
 extern size_t s_editLevelLayerDelegate1;
 extern size_t s_editLevelLayerDelegate2;

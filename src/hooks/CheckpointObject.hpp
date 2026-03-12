@@ -1,7 +1,7 @@
 #pragma once
 #include <Geode/Geode.hpp>
 #include <Geode/modify/CheckpointObject.hpp>
-#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
+#include "PersistenceAPI.hpp"
 
 class $modify(PSCheckpointObject, CheckpointObject) {
 protected:

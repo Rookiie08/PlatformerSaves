@@ -4,7 +4,7 @@
 #include <Geode/modify/PlayLayer.hpp>
 #include <domain/CheckpointGameObjectReference.hpp>
 #include <hooks/CheckpointObject.hpp>
-#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
+#include "PersistenceAPI.hpp"
 #include <util/platform.hpp>
 
 class PSPlayLayer;
