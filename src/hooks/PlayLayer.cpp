@@ -5,7 +5,6 @@
 #include "hooks/PauseLayer.hpp"
 #include "hooks/FMODAudioEngine.hpp"
 #if !defined(GEODE_IS_IOS)
-#include <geode.custom-keybinds/include/Keybinds.hpp>
 #endif
 #include <util/algorithm.hpp>
 #include <util/filesystem.hpp>
@@ -272,6 +271,7 @@ bool PSPlayLayer::validSaveExists() {
 
 #if !defined(GEODE_IS_IOS)
 void PSPlayLayer::setupKeybinds() {
+#if 0
     addEventListener<keybinds::InvokeBindFilter>(
         [this](keybinds::InvokeBindEvent* event) {
             if (event->isDown() && canSave() && startSaveGame()) {
@@ -286,6 +286,7 @@ void PSPlayLayer::setupKeybinds() {
         },
         "save-game"_spr
     );
+#endif
 }
 #endif
 

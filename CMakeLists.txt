@@ -64,4 +64,8 @@ add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
 target_include_directories(${PROJECT_NAME} PRIVATE "C:/PlatformerSaves/PersistenceAPI/include")
 
-setup_geode_mod(${PROJECT_NAME} EXTERNALS sabe.persistenceapi)
+setup_geode_mod(${PROJECT_NAME})
+
+if (MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /FS)
+endif()

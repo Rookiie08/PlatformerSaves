@@ -22,8 +22,14 @@
 		"gameplay"
 	],
 	"dependencies": {
-		"geode.node-ids": ">=v1.12.0-beta.4",
-		"sabe.persistenceapi": "v1.1.0"
+		"geode.node-ids": {
+			"version": ">=v1.12.0-beta.4",
+			"importance": "required"
+		},
+		"sabe.persistenceapi": {
+			"version": "v1.1.0",
+			"importance": "required"
+		}
 	},
 	"settings": {
 		"auto-save": {
