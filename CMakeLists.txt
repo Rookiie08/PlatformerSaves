@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if ("${GEODE_TARGET_PLATFORM}" STREQUAL "iOS" OR IOS)
         set(CMAKE_OSX_ARCHITECTURES "arm64")
@@ -53,8 +53,10 @@ else()
     message(STATUS "Found Geode: $ENV{GEODE_SDK}")
 endif()
 
-target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-microsoft-include")
-target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-invalid-offsetof")
+if (NOT MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-microsoft-include")
+    target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-invalid-offsetof")
+endif()
 
 target_include_directories(${PROJECT_NAME} PRIVATE src/)
 
