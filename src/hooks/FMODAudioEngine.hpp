@@ -2,7 +2,7 @@
 #include "Geode/modify/Modify.hpp"
 #include <Geode/Geode.hpp>
 #include <Geode/modify/FMODAudioEngine.hpp>
-#include "PersistenceAPI.hpp"
+#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
 
 class $modify(PSFMODAudioEngine, FMODAudioEngine) {
 public:

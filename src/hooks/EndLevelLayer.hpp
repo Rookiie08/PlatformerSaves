@@ -1,7 +1,7 @@
 #pragma once
 #include <Geode/Geode.hpp>
 #include <Geode/modify/EndLevelLayer.hpp>
-#include "PersistenceAPI.hpp"
+#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
 
 class $modify(PSEndLevelLayer, EndLevelLayer) {
 public:

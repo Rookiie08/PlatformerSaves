@@ -1,5 +1,5 @@
 #pragma once
-#include "PersistenceAPI.hpp"
+#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
 
 class CheckpointGameObjectReference {
 public:
