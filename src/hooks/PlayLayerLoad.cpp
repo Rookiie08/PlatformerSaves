@@ -15,7 +15,7 @@ bool PSPlayLayer::readPSFVersionAndUpdateIfNecessary() {
     m_fields->m_stream.read(l_psfMagicAndVer.data(), sizeof(s_psfMagicAndVer));
     l_psfMagicAndVer = l_psfMagicAndVer.substr(5, 5);
     l_psfMagicAndVer.erase(std::remove(l_psfMagicAndVer.begin(), l_psfMagicAndVer.end(), '.'), l_psfMagicAndVer.end());
-    m_fields->m_readPSFVersion = std::stoi(l_psfMagicAndVer);
+    m_fields->m_readPSFVersion = geode::utils::numFromString<int>(l_psfMagicAndVer).unwrapOr(0);
     //log::info("[readPSFVersionAndUpdateIfNecessary] Read PSF Version: {}", m_fields->m_readPSFVersion);
     if (s_psfVersion != m_fields->m_readPSFVersion) {
         if (!makeBackup()) {

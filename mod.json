@@ -1,5 +1,5 @@
 {
-	"geode": ">=5.0.0",
+	"geode": "5.5.3",
 	"gd": {
 		"win": "2.2081",
 		"android": "2.2081",
@@ -11,7 +11,6 @@
 	"name": "PlatformerSaves",
 	"developer": "Sabe",
 	"description": "Save and load your progress in platformer levels!",
-	"repository": "https://github.com/0x5abe/PlatformerSaves",
 	"resources": {
 		"sprites": [
 			"resources/saveButton.png"
@@ -23,13 +22,16 @@
 	],
 	"dependencies": {
 		"geode.node-ids": {
-			"version": ">=v1.12.0-beta.4",
-			"importance": "required"
+			"version": ">=v1.23.1",
+			"required": true
 		},
 		"sabe.persistenceapi": {
 			"version": ">=v1.1.0",
-			"importance": "required"
+			"required": true
 		}
+	},
+	"links": {
+		"source": "https://github.com/0x5abe/PlatformerSaves"
 	},
 	"settings": {
 		"auto-save": {

@@ -1,5 +1,5 @@
 #include <Geode/Geode.hpp>
-#include "PersistenceAPI.hpp"
+#include <sabe.persistenceapi/include/PersistenceAPI.hpp>
 
 using namespace geode::prelude;
 using namespace persistenceAPI;
